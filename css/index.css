@@ -1,0 +1,86 @@
+.background_image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -1;
+    transition: .7s ease;
+}
+.background_image_hover {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.background_image_hover:hover .background_image{
+    filter: blur(4px);
+    opacity: 70%;
+}
+.background_image_hover:hover .btn_custom{
+    opacity: 100%;
+}
+
+.btn_custom2 {
+    background-color: #89fc72;
+    color: #080808 ;
+    border: none;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.editor_background {
+    width: 100%;
+    height: auto;
+    background-color: #151728;
+    display: flex;
+    justify-content: center;
+}
+.editor_wrapper {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 40px;
+}
+.editor_card {
+    width: 300px;
+    height: auto;
+    background-color: #21243B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.editor_icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+.editor_card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.editor_name {
+    font-size: 24px;
+    color: #d8d8d8;
+}
+.editor_nameEn {
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-bottom: 20px;
+}
+.editor_work {
+    font-size: 18px;
+    color: #d6d6d6;
+}
