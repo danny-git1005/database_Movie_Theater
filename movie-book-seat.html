@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>資料庫的作業</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/movie-book-seat.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg nav-purple text-dark">
+        <div class="container-fluid">
+            <div class="nav_brand">
+                <a class="text-light brand_text" href="./index.html">資料庫電影院</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav_items">
+                    <li class="nav-item passive">
+                        <a class="text-light nav-link" href="./index.html">首頁</a>
+                    </li>
+                    <li class="nav-item actived">
+                        <a class="text-light nav-link active" aria-current="page" href="./movielist.html">電影清單</a>
+                    </li>
+                    <li class="nav-item passive">
+                        <div class="text-light nav-link" href="">關於我們</div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn_custom btn-lightblue nav-link" href="./login.html">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn_custom btn-white nav-link" href="./signup.html">註冊</a>
+                    </li>
+                    <li class="nav-item displayNone">
+                        <a class="userWrapper" href="./user-info.html">
+                            <div class="btn-lightblue user_icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user_name"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page_content">
+        <div class="detailWrapper">
+            <div class="seat_title_wrapper">
+                <div class="seat_title">2021/06/20</div>
+                <div class="seat_title">12:00</div>
+                <div class="seat_title">拉基</div>
+                <div class="seat_title">座位圖</div>
+            </div>
+            <div class="seat_screen">
+                <div class="seat_screen_text">螢幕</div>
+            </div>
+            <div class="seat_hint_wrapper">
+                <div class="seat_small"></div>
+                <div class="seat_hint_text">空的座位</div>
+                <div class="seat_small green"></div>
+                <div class="seat_hint_text">你選的位置</div>
+                <div class="seat_small red"></div>
+                <div class="seat_hint_text">已被其他人選走</div>
+            </div>
+            <div class="seat_wrapper">
+                <div class="seat_row">
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                </div>
+                <div class="seat_row">
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                </div>
+                <div class="seat_row">
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                </div>
+                <div class="seat_row hidden">
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat hidden"></div>
+                </div>
+                <div class="seat_row">
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                </div>
+                <div class="seat_row">
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                </div>
+                <div class="seat_row">
+                    <div class="seat_column seat red"></div>
+                    <div class="seat_column seat red"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat hidden"></div>
+                    <div class="seat_column seat"></div>
+                    <div class="seat_column seat"></div>
+                </div>
+            </div>
+            <div class="btn_book_wrapper">
+                <a class="btn_book white">返回</a>
+                <a class="btn_book lightblue">訂票</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/movie-book-seat.js"></script>
+    <script src="js/show-seat-title.js"></script>
+    <script src="js/book_ticket.js"></script>
+
+    <script typs="text/javascipt">
+
+        let ticket_info = new URLSearchParams(window.location.search);
+        let id = $.cookie('userid');
+        $(window).on('load', function() {
+            url="./js/show-seat-title.js";
+            $.getScript(url,function(){
+                show_seat_title(ticket_info);
+            });
+        });
+        //console.log(id);
+        $('.btn_book.white').on('click', function() {
+            url = "./movie-book.html?name="+ticket_info.get('name');
+            window.location.href = url;
+        })
+        $('.btn_book.lightblue').on('click', function() {
+            url="./js/book_ticket.js";
+            $.getScript(url , function(){
+                book_ticket(ticket_info);
+            })
+        })
+    </script>
+    <script src="js/common.js"></script>
+</body>
+
+
+</html>

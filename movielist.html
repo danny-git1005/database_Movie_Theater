@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>資料庫的作業</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/movielist.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg nav-purple text-dark">
+        <div class="container-fluid">
+            <div class="nav_brand">
+                <a class="text-light brand_text" href="./index.html">資料庫電影院</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav_items">
+                    <li class="nav-item passive">
+                        <a class="text-light nav-link" href="./index.html">首頁</a>
+                    </li>
+                    <li class="nav-item actived">
+                        <a class="text-light nav-link active" aria-current="page" href="./movielist.html">電影清單</a>
+                    </li>
+                    <li class="nav-item passive">
+                        <div class="text-light nav-link" href="">關於我們</div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn_custom btn-lightblue nav-link" href="./login.html">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn_custom btn-white nav-link" href="./signup.html">註冊</a>
+                    </li>
+                    <li class="nav-item displayNone">
+                        <a class="userWrapper" href="./user-info.html">
+                            <div class="btn-lightblue user_icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user_name"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page_content">
+        <div class="tabWrapper">
+            <div class="tab tab_active">
+                新燒影榜
+            </div>
+            <div class="tab tab_passive">
+                現正熱映
+            </div>
+            <div class="tab tab_passive">
+                即將上映
+            </div>
+        </div>
+        <div class="article-loop">
+            <div class="cardWrapper">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="article-loop">
+            <div class="cardWrapper">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="article-loop">
+            <div class="cardWrapper">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/movielist.js"></script>
+    <script src="js/get_movie.js" ></script>
+    <script src="js/get_detail.js"></script>
+    <script src="js/get_cookie.js"></script>
+    <script src="js/common.js"></script>
+    <script typs="text/javascipt">
+        $(window).on('load', function() {
+            url="./js/get_movie.js";
+            $.getScript(url,function(){
+                get_movie( $('.page-num.active').text() );
+            });
+            $('.card').on('click', function() {
+                let name = $(this).children('.card_nameCh').text();
+
+                url = "./movie-details.html?name="+name;
+                window.location.href = url;
+            })
+        });
+    </script>
+    <script typs="text/javascipt">
+        console.log($.cookie)
+        if( $.cookie('username') )
+        {
+            get_user_info();
+        }
+    </script>
+
+    <script typs="text/javascipt">                                      //將資料加進每一頁
+        let orgin = [1,1,0,0];
+        $(document).on('click','.pagination-button',function(){
+            let page = parseInt($('.pagination-button.active').text(),10);
+            url="./js/get_movie.js";
+            if (orgin[page] === 0)
+            {
+                $.getScript(url,function(){
+                    get_movie( page );
+                    orgin[page] = 1;
+                });
+
+                $('.card').on('click', function() {
+                    let name = $(this).children('.card_nameCh').text();
+
+                    url = "./movie-details.html?name="+name;
+                    window.location.href = url;
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>
